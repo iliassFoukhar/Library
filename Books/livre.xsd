@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!-- balises isolées --> <xsd:element name="titre" type="xsd:string"/> 
+  <xsd:element
+    name="description" type="xsd:string"/> <xsd:element name="cover" type="xsd:string"/>
+    <xsd:element name="date" type="xsd:string"/> 
+  <!-- balises d'un auteur --> <xsd:element name="nom" type="xsd:string"/> <xsd:element
+    name="prenom" type="xsd:string"/> <xsd:element name="nationalité" type="xsd:string"/>
+  <!-- balise auteur --> <xsd:element name="auteur"> <xsd:complexType> <xsd:sequence> <xsd:element
+          ref="nom"/> <xsd:element ref="prenom"/> <xsd:element ref="nationalité"/> </xsd:sequence>
+    </xsd:complexType> </xsd:element>     <xsd:element name="titre_s"
+    type="xsd:string"/> <xsd:element name="paragraphe"/>
+  <!-- balise sction --> <xsd:element name="section"> <xsd:complexType> <xsd:sequence> <xsd:element
+          ref="titre_s"/> <xsd:element ref="paragraphe" maxOccurs="unbounded"/> </xsd:sequence>
+    </xsd:complexType> </xsd:element> <xsd:element name="livre"> <xsd:complexType> <xsd:sequence>
+          <xsd:element ref="auteur"/> <xsd:element ref="titre"/> <xsd:element ref="description"/>
+          <xsd:element ref="cover"/> <xsd:element ref="date"/> 
+          <xsd:element ref="section"/> </xsd:sequence> </xsd:complexType> </xsd:element> </xsd:schema>

@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Carter+One&family=Gloria+Hallelujah&display=swap');
+ :root{
+  --color-black : #100303;
+  --color-purple : #95389e;
+  --color-turquois :gold;
+  --color-white : #f7f7f7;
+
+  --color-p1 : #2c003e;
+ --color-p2 : #512b58;
+ --color-pink : brown;
+ --color-grey : #d2fafb;
+
+ --color-turquoisTwo :  #17a2b8;
+}
+
+body{
+  margin : 0;
+  background-color : #121212;;
+}
+html{
+  background-color: #121212;
+}
+#logo{
+border-radius : 50%;
+}
+#bg{
+  width : 100%;
+  height : auto;
+}
+
+
+@media screen and (min-width:1000px) and (max-width:1500px){
+  .navbar-nav{
+  padding-left : 35vh;
+  }
+}
+.navbar-nav li{
+    padding-right : 20px;
+}
+.nav-link{
+    font-size : 1.1em !important;
+}
+.carousel-inner img{
+    height : 90vh;
+      width : auto;
+}
+.carousel-caption{
+
+    position : absolute;
+    top : 60%;
+    transform: translateY(-60%);
+    background-color : rgba(0,0,0,0.2);
+    border-radius : 1rem;
+
+}
+
+.carousel-caption h5{
+    font-size : 450%;
+    font-family: 'Carter One', cursive;
+    text-transform : uppercase;
+    text-shadow : 1px 1px 15px #000;
+    font-weight : 200;
+    color : var(--color-turquois);
+}
+.pinky{
+  color : var(--color-pink);
+}
+.carousel-caption p{
+    font-size : 200%;
+
+    font-family: 'Extra Serif', cursive;
+
+    font-weight : 500;
+    text-shadow : 1px 1px 10px #000;
+    padding-bottom : 1rem;
+}
+
+.title-section{
+  background-color : brown;
+  font-size : 2rem;
+  padding : 0.8rem;
+  width : 100%;
+  color: var(--color-white);
+  border-bottom-right-radius : 3rem;
+  border-bottom-left-radius : 3rem;
+  text-shadow : 1px 1px 15px black;
+}
+/* show Books */
+#nouveautes{
+  background-color: #121212;
+}
+.books{
+  overflow: auto;
+  white-space: nowrap;
+}
+.books .book{
+   display: inline-block;
+   padding: 14px;
+}
+.book img{
+  height :60vh;
+  width : auto;
+}
+
+/* FOOTER */
+#footer{
+  background-color : #000000;
+  color : white;
+  padding : 0.75rem 0 0.5rem 0;
+}
+
+/* Search results */
+#searchResults .row .found{
+  border-radius: 0.75rem;
+  padding : 1rem;
+  margin : 1rem 0;
+}
+#searchResults .row .found img{
+  margin-bottom : 1rem;
+  border : solid 2px white;
+  height : 60vh;
+}
+
+/* readPage*/
+#readPage{
+  background-color : #FEFEFE;
+}
