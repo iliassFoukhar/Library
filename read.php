@@ -28,6 +28,8 @@
   <!-- My JS -->
     <script src="read.js" type="text/javascript">
     </script>
+    <script src="audioBook.js" type="text/javascript">
+    </script>
 </head>
 <body style="background-color:#FEFEFE;">
   <!-- Navbar -->
@@ -51,9 +53,17 @@
 </nav>
 <!-- Read-->
 <div id="readPage">
-  <button class="btn btn-warning" onclick="decrementPage()">Previous</button>
-  <button class="btn btn-danger">Play</button>
-  <button class="btn btn-warning" onclick="incrementPage()">Next</button>
+  <div class="row text-center">
+
+    <div class="col-md-4 offset-4">
+      <button class="btn btn-warning btn-lg lpr" onclick="decrementPage()"><i style="font-size:3rem" class="fa fa-arrow-circle-left" aria-hidden="true"></i></button>
+      <button class="btn btn-danger btn-lg lpr" onClick="playPressed()"><i class="fas fa-play-circle" style="font-size:3rem"></i></button>
+      <button class="btn btn-warning btn-lg lpr" onclick="incrementPage()"><i style="font-size:3rem" class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
+    </div>
+
+  </div>
+
+
   <?php
     $xml = simplexml_load_file("Books/livre{$i}.xml");
     echo "<p class='content title' style='display:block;'>".$xml->titre."</p>";
