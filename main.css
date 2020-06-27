@@ -1,17 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Varela+Round&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Carter+One&family=Gloria+Hallelujah&display=swap');
  :root{
-  --color-black : #100303;
-  --color-purple : #95389e;
-  --color-turquois :gold;
   --color-white : #f7f7f7;
-
-  --color-p1 : #2c003e;
- --color-p2 : #512b58;
- --color-pink : brown;
- --color-grey : #d2fafb;
-
- --color-turquoisTwo :  #17a2b8;
 }
 
 body{
@@ -20,6 +10,7 @@ body{
 }
 html{
   background-color: #121212;
+  scroll-behavior: smooth;
 }
 #logo{
 border-radius : 50%;
@@ -61,10 +52,10 @@ border-radius : 50%;
     text-transform : uppercase;
     text-shadow : 1px 1px 15px #000;
     font-weight : 200;
-    color : var(--color-turquois);
+    color :gold;
 }
 .pinky{
-  color : var(--color-pink);
+  color : brown;
 }
 .carousel-caption p{
     font-size : 200%;

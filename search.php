@@ -65,7 +65,9 @@ function byAuthor($searched){
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <!-- Font awesome -->
     <script src="https://kit.fontawesome.com/d01999573a.js" crossorigin="anonymous"></script>
-
+    <!-- My JS -->
+    <script src="scrollingBooks.js" type="text/javascript">
+    </script>
 </head>
 <body style="background-color:#121212;">
   <!-- Navbar -->
@@ -119,7 +121,7 @@ function byAuthor($searched){
       </div>
     </div>
   </div>
-  <div class="books">
+  <div class="books" id="outer">
     <div class="book">
       <img class="img-reponsive" src="Covers/livre1.jpg"/>
     </div>

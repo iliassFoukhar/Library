@@ -15,6 +15,10 @@
   <!-- Font awesome -->
     <script src="https://kit.fontawesome.com/d01999573a.js" crossorigin="anonymous"></script>
 
+    <!-- My JS -->
+    <script src="scrollingBooks.js" type="text/javascript">
+    </script>
+
 </head>
 <body style="background-color:#121212;">
   <!-- Navbar -->
@@ -49,6 +53,7 @@
       <div class="carousel-caption d-none d-md-block">
         <h5>Librairie<span class="pinky"> 2.0</span></h5>
         <p>Bienvenue dans notre platforme !</p>
+        <a href="#nouveautes"><button class="btn btn-success btn-lg">Nouvel Arrivage</button></a>
       </div>
     </div>
     <div class="carousel-item">
@@ -56,6 +61,7 @@
       <div class="carousel-caption d-none d-md-block">
         <h5>Librairie<span class="pinky"> 2.0</span></h5>
         <p>On met plusieurs livres à votre disposition pour les lire en ligne !</p>
+        <a href="#nouveautes"><button class="btn btn-warning btn-lg">Nouvel Arrivage</button></a>
       </div>
     </div>
     <div class="carousel-item">
@@ -63,6 +69,8 @@
       <div class="carousel-caption d-none d-md-block">
         <h5>Librairie<span class="pinky"> 2.0</span></h5>
         <p>Prenez un vers de café et enrichissez vos cerveau !</p>
+        <a href="#nouveautes"><button class="btn btn-danger btn-lg">Nouvel Arrivage</button></a>
+
       </div>
     </div>
   </div>
@@ -83,7 +91,7 @@
       </div>
     </div>
   </div>
-  <div class="books">
+  <div class="books" id="outer">
     <div class="book">
       <img class="img-reponsive" src="Covers/livre1.jpg"/>
     </div>

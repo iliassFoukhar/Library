@@ -25,12 +25,24 @@
       currentPage++;
       changePage(currentPage-1);
     }
+      if(speechSynthesis.speaking){
+          speechSynthesis.cancel();
+      }
   }
 //Decrement Page
   function decrementPage(){
     if(currentPage > 1){
       currentPage--;
       changePage(currentPage-1);
+    }
+    if(speechSynthesis.speaking){
+        speechSynthesis.cancel();
+        //Icon
+        buttons[1].children[0].classList.add("fa-play-circle");
+        buttons[1].children[0].classList.remove("fa-stop-circle");
+        //color
+        buttons[1].classList.remove("btn-secondary");
+        buttons[1].classList.add("btn-danger");
     }
 
   }
