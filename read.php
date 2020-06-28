@@ -7,6 +7,10 @@
   else{
     header("location: index.php");
   }
+
+
+
+
 ?>
 <!DOCTYPE HTML>
 <html lang="fr" style="background-color:#FEFEFE;">
@@ -55,10 +59,10 @@
 <div id="readPage">
   <div class="row text-center">
 
-    <div class="col-md-4 offset-4">
-      <button class="btn btn-warning btn-lg lpr" onclick="decrementPage()"><i style="font-size:3rem" class="fa fa-arrow-circle-left" aria-hidden="true"></i></button>
-      <button class="btn btn-danger btn-lg lpr" onClick="playPressed()"><i class="fas fa-play-circle" style="font-size:3rem"></i></button>
-      <button class="btn btn-warning btn-lg lpr" onclick="incrementPage()"><i style="font-size:3rem" class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
+    <div class="col-md-6 offset-3">
+      <button class="btn btn-warning btn-lg lpr" onclick="decrementPage()"><i style="font-size:3rem" class="fa fa-arrow-circle-left" aria-hidden="true"></i> <br> Page Précédente</button>
+      <button class="btn btn-danger btn-lg lpr" onClick="playPressed()"><i class="fas fa-play-circle" style="font-size:3rem"></i> <br>lecture audio</button>
+      <button class="btn btn-warning btn-lg lpr" onclick="incrementPage()"><i style="font-size:3rem" class="fa fa-arrow-circle-right" aria-hidden="true"></i> <br>Prochaine Page</button>
     </div>
 
   </div>

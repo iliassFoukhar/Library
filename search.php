@@ -1,8 +1,7 @@
 <?php
 function byAuthor($searched){
-    $found = false;
     $i = 1;
-
+    $found = false;
     while(is_readable("Books/livre".$i.".xml")){
       $xmlFileName = "Books/livre".$i.".xml";
       $xml = simplexml_load_file($xmlFileName) or die("Erreur : fichier introuvable");
@@ -20,13 +19,16 @@ function byAuthor($searched){
       }
       $i++;
     }
-
+    if($found == false){
+      echo "<p class='text-center' align='center' style='font-size : 2.5rem; color : white; font-weight : 300;'>";
+      echo "Aucun livre n'est trouvé dont le nom d'auteur contient : '".$searched."'";
+      echo "</p>";
+    }
   }
 
   function byTitle($searched){
-      $found = false;
       $i = 1;
-
+      $found = false;
       while(is_readable("Books/livre".$i.".xml")){
         $xmlFileName = "Books/livre".$i.".xml";
         $xml = simplexml_load_file($xmlFileName) or die("Erreur : fichier introuvable");
@@ -40,6 +42,11 @@ function byAuthor($searched){
           echo "</div>";
         }
         $i++;
+      }
+      if($found == false){
+        echo "<p class='text-center' align='center' style='font-size : 2.5rem; color : white; font-weight : 300;'>";
+        echo "Aucun livre n'est trouvé dont le titre contient: '".$searched."'";
+        echo "</p>";
       }
     }
 
@@ -96,6 +103,7 @@ function byAuthor($searched){
         <h3 class="title-section text-center" id="category-first-text">Resultats</h3>
       </div>
        <?php
+       $found = false;
        switch($type){
          case 0:
            byTitle($text);
@@ -104,9 +112,11 @@ function byAuthor($searched){
            byAuthor($text);
            break;
          default:
-           echo "Asb7an lah";
+           echo "Error Type";
            break;
        }
+
+
        ?>
 
   </div>

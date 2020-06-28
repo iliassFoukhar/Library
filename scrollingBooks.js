@@ -1,5 +1,6 @@
 //To decide whether it's left or right scroll
   let plusOrMinus = 0;
+  let tempPlusOrMinus = 0;
 //frequency of setInterval function
   const frequency = 10;
 //scrolling speed
@@ -12,8 +13,19 @@
   window.addEventListener("load",()=>{
     //the object that holds the container of all books
       const outer = document.getElementById("outer");
+      outer.addEventListener("mouseover", ()=>{
+        tempPlusOrMinus = plusOrMinus;
+        currentPosition = outer.scrollLeft;
+        plusOrMinus = 0;
+      });
+      outer.addEventListener("mouseout", ()=>{
+        plusOrMinus = tempPlusOrMinus;
+      });
       plusOrMinus = 1;
       maxWidth = outer.scrollLeftMax;
+      if(maxWidth == undefined || !maxWidth){
+        maxWidth = 1200;
+      }
 });
 //To scroll
   setInterval(()=>{
